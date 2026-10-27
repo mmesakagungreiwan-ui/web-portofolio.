@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mesakh Agung Reiwan — Network Administrator & Web Developer. Siswa TKJ SMK Sore Tulungagung, fokus di Debian Server, Apache2, Mikrotik, dan Website Jualan Cepat (AccaStore & BimbingPKL).">
+  <meta name="keywords" content="Mesakh Agung Reiwan, AccaStore, BimbingPKL, Network Administrator, Web Developer, Debian 12, Apache2, Mikrotik, Tulungagung, TKJ">
+  <meta name="author" content="Mesakh Agung Reiwan">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Mesakh Agung Reiwan — Network Administrator & Web Developer">
+  <meta property="og:description" content="Siswa TKJ yang fokus di administrasi jaringan dan web development. Setup Debian 12, Apache2, Mikrotik, AccaStore, dan BimbingPKL.">
+  <meta property="og:type" content="website">
+
+  <title>Mesakh Agung Reiwan — Network Administrator & Web Developer</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#hero" class="skip-link">Lewati ke konten utama</a>
+
+  <!-- DYNAMIC BACKGROUND CANVAS, CYBER GRID & AMBIENT AURORA GLOWS -->
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+  <div class="aurora-blob aurora-1" aria-hidden="true"></div>
+  <div class="aurora-blob aurora-2" aria-hidden="true"></div>
+  <div class="aurora-blob aurora-3" aria-hidden="true"></div>
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar-wrapper" id="header">
+    <nav class="navbar container" aria-label="Navigasi Utama">
+      <a href="#hero" class="nav-brand" aria-label="Mesakh Homepage">
+        <span class="brand-monogram">M</span>
+        <span class="brand-name">Mesakh<span class="brand-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Action items: Theme Toggle & Contact Button -->
+      <div class="nav-actions">
+        <!-- Dark / Light Mode Toggle Button -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Ganti tema tampilan" title="Ganti tema">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- CTA pill -->
+        <a href="#contact" class="btn btn-sm btn-primary nav-cta">Let's Talk</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="mobile-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Buka menu navigasi">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <a href="#contact" class="btn btn-primary btn-full mobile-cta-link">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        
+        <!-- PROFILE PHOTO FRAME (Supports Transparent / Remove-Background Photos) -->
+        <div class="hero-avatar-wrapper reveal">
+          <div class="hero-avatar-ambient-glow" aria-hidden="true"></div>
+          <div class="hero-avatar-frame">
+            <div class="hero-avatar-inner">
+              <img 
+                src="foto.jpeg" 
+                alt="Foto Profil Mesakh Agung Reiwan" 
+                class="hero-avatar-img" 
+                id="hero-avatar-img"
+                onerror="this.onerror=null; this.src='profile.svg';"
+              >
+            </div>
+            <div class="avatar-badge-verified" title="Terverifikasi Network Administrator">
+              <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+          </div>
+          <div class="avatar-status-pill">
+            <span class="status-pulse" aria-hidden="true"></span>
+            <span>Fokus di Debian Server & Website Jualan Cepat</span>
+          </div>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="hero-title reveal">
+          Hi, I'm <span class="text-gradient">Mesakh Agung Reiwan</span>.
+        </h1>
+
+        <!-- Interactive Dynamic Role Typing Effect -->
+        <div class="hero-typing-box reveal">
+          <span class="terminal-prefix">&gt;</span>
+          <span class="typing-text" id="typing-text">Network Administrator & Web Developer</span>
+          <span class="typing-cursor" aria-hidden="true">|</span>
+        </div>
+
+        <p class="hero-tagline reveal">
+          <span class="tag-role">Network Administrator</span>
+          <span class="bullet" aria-hidden="true">•</span>
+          <span class="tag-role">Web Developer</span>
+          <span class="bullet" aria-hidden="true">•</span>
+          <span class="tag-role">Siswa TKJ</span>
+        </p>
+
+        <!-- Brief Description (SESUAI REQUEST NOMOR 2) -->
+        <p class="hero-description reveal">
+          Saya siswa TKJ yang fokus di administrasi jaringan dan web development. Selama PKL di <strong>PT. Trimitra Sejati</strong> sebagai Network Administrator, saya belajar setup server <strong>Debian 12</strong> dan hosting website dengan <strong>Apache2</strong>. Di luar itu, saya ngembangin <strong>AccaStore</strong> untuk jasa top-up dan <strong>BimbingPKL</strong> untuk bantu teman-teman beresin laporan PKL.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta-group reveal">
+          <a href="#contact" class="btn btn-primary">
+            <span>Hubungi Saya</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#projects" class="btn btn-secondary">
+            <span>Lihat Project Unggulan</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+          <a href="http://accastore-portfoliov1.xo.je" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" title="Kunjungi AccaStore Portfolio">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            <span>AccaStore Live</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- MARQUEE / TICKER SECTION (Mesakh's Exact Stack) -->
+      <div class="marquee-wrapper" aria-label="Ticker keahlian Mesakh">
+        <div class="marquee-track">
+          <!-- First stream of tech chips -->
+          <div class="marquee-content">
+            <span class="marquee-chip"><span class="chip-dot"></span>Debian 12</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Apache2</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Linux Terminal</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Virtual Host</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Mikrotik</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>TCP/IP</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Subnetting</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Troubleshooting Jaringan</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>HTML & CSS</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Tailwind CSS</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>JavaScript Basic</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Vibe Coding</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Git & GitHub</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>VS Code</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>cPanel</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>FileZilla</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Canva</span>
+          </div>
+          <!-- Second stream duplicated for seamless infinite scroll -->
+          <div class="marquee-content" aria-hidden="true">
+            <span class="marquee-chip"><span class="chip-dot"></span>Debian 12</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Apache2</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Linux Terminal</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Virtual Host</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Mikrotik</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>TCP/IP</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Subnetting</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Troubleshooting Jaringan</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>HTML & CSS</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Tailwind CSS</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>JavaScript Basic</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Vibe Coding</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Git & GitHub</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>VS Code</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>cPanel</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>FileZilla</span>
+            <span class="marquee-chip"><span class="chip-dot"></span>Canva</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">01 / Profil Singkat</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Fokus di Debian Server & Website Jualan Cepat.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Bio Narrative -->
+          <div class="about-bio-card spotlight-card reveal">
+            <div class="bio-header">
+              <span class="bio-subtitle">Siswa TKJ & Builder</span>
+              <h3 class="bio-headline">Menghubungkan Server yang Stabil dengan Website yang Menghasilkan.</h3>
+            </div>
+            
+            <p class="bio-text">
+              Saya siswa TKJ yang fokus di administrasi jaringan dan web development. Selama PKL di <strong>PT. Trimitra Sejati</strong> sebagai Network Administrator, saya belajar setup server <strong>Debian 12</strong> dan hosting website dengan <strong>Apache2</strong>.
+            </p>
+
+            <p class="bio-text">
+              Di luar itu, saya ngembangin <strong>AccaStore</strong> untuk jasa top-up dan <strong>BimbingPKL</strong> untuk bantu teman-teman beresin laporan PKL (format, spacing, dan layout). Saya terbiasa bekerja cepat, memecahkan masalah jaringan, dan membangun solusi digital yang langsung bisa dipakai.
+            </p>
+
+            <div class="bio-meta-list">
+              <div class="meta-item">
+                <span class="meta-label">Nama</span>
+                <span class="meta-value">Mesakh Agung Reiwan</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Title</span>
+                <span class="meta-value">Network Administrator & Web Dev</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Status</span>
+                <span class="meta-value">Siswa TKJ - SMK</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Lokasi</span>
+                <span class="meta-value">Kenayan, Kampung Dalam, Tulungagung</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Stats & Highlights -->
+          <div class="about-stats-column">
+            <div class="stats-grid">
+              <div class="stat-card spotlight-card reveal" data-target="100">
+                <div class="stat-number-wrapper">
+                  <span class="stat-counter" data-count="100">0</span><span class="stat-suffix">%</span>
+                </div>
+                <div class="stat-label">Debian 12 Setup & Hosting</div>
+                <p class="stat-desc">Pengalaman langsung instalasi Apache2, virtual host, dan permission di server produksi PT. Trimitra Sejati.</p>
+              </div>
+
+              <div class="stat-card spotlight-card reveal" data-target="2">
+                <div class="stat-number-wrapper">
+                  <span class="stat-counter" data-count="2">0</span><span class="stat-suffix"></span>
+                </div>
+                <div class="stat-label">Live Platform Shipped</div>
+                <p class="stat-desc">AccaStore (Top-up E-Commerce) & BimbingPKL.id (Landing page jasa bimbingan format laporan).</p>
+              </div>
+            </div>
+
+            <!-- Focus Ethos Card -->
+            <div class="editorial-quote-card spotlight-card reveal">
+              <div class="quote-icon" aria-hidden="true">“</div>
+              <p class="quote-text">
+                "Fokus di Debian Server & Website Jualan Cepat. Solusi praktis, server aman, web langsung jalan."
+              </p>
+              <div class="quote-author">— Mesakh Agung Reiwan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION (FOKUS 4 KATEGORI SESUAI REQUEST) -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">02 / Keahlian</span>
+          <h2 class="section-title">Core Skills</h2>
+          <p class="section-subtitle">Fokus pada 4 pilar teknis: Server, Network, Web Dev, dan Tools kerja.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Card 1: Server -->
+          <div class="skill-card spotlight-card reveal">
+            <div class="skill-card-top">
+              <span class="skill-number">01</span>
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+            </div>
+            <h3 class="skill-title">Server Administration</h3>
+            <p class="skill-description">
+              Instalasi, konfigurasi web server, manajemen hak akses folder web, dan virtual hosting di lingkungan server Linux.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Debian 12</span>
+              <span class="skill-tag">Apache2</span>
+              <span class="skill-tag">Linux Terminal</span>
+              <span class="skill-tag">Virtual Host</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: Network -->
+          <div class="skill-card spotlight-card reveal">
+            <div class="skill-card-top">
+              <span class="skill-number">02</span>
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="skill-title">Network Administration</h3>
+            <p class="skill-description">
+              Perancangan alamat IP, konfigurasi router Mikrotik, dan pemecahan kendala konektivitas jaringan kantor/sekolah.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Mikrotik</span>
+              <span class="skill-tag">TCP/IP</span>
+              <span class="skill-tag">Subnetting</span>
+              <span class="skill-tag">Troubleshooting Jaringan</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: Web Dev -->
+          <div class="skill-card spotlight-card reveal">
+            <div class="skill-card-top">
+              <span class="skill-number">03</span>
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3 class="skill-title">Web Development</h3>
+            <p class="skill-description">
+              Membangun website jualan cepat, landing page jasa, dan portofolio interaktif responsif dengan metode coding cepat.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">JavaScript Basic</span>
+              <span class="skill-tag">Vibe Coding</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 4: Tools -->
+          <div class="skill-card spotlight-card reveal">
+            <div class="skill-card-top">
+              <span class="skill-number">04</span>
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="skill-title">Tools & Workflow</h3>
+            <p class="skill-description">
+              Perangkat manajemen kode, upload file FTP ke server, panel hosting, dan perancangan materi visual promosi.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Git & GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">cPanel</span>
+              <span class="skill-tag">FileZilla</span>
+              <span class="skill-tag">Canva</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION SECTION -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">03 / Pengalaman & Sekolah</span>
+          <h2 class="section-title">Experience & Education</h2>
+          <p class="section-subtitle">Pengalaman nyata di industri dan latar belakang pendidikan kejuruan.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Column 1: Experience -->
+          <div class="timeline-column reveal">
+            <div class="timeline-column-header">
+              <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              <h3 class="timeline-column-title">Pengalaman Kerja (PKL & Project)</h3>
+            </div>
+
+            <div class="timeline-list">
+              <!-- Item 1: PT Trimitra Sejati -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-time">PKL 2026</div>
+                  <h4 class="timeline-role">Network Administrator</h4>
+                  <div class="timeline-org">PT. Trimitra Sejati</div>
+                  <p class="timeline-desc">
+                    Maintenance server, konfigurasi web server Apache2 di Debian 12, manajemen direktori `/var/www/html`, dan dokumentasi jaringan kerja.
+                  </p>
+                  <div class="timeline-badges">
+                    <span class="tag-pill">Debian 12</span>
+                    <span class="tag-pill">Apache2</span>
+                    <span class="tag-pill">Server Maintenance</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2: AccaStore & BimbingPKL -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-time">2024 — Sekarang</div>
+                  <h4 class="timeline-role">Founder & Web Developer</h4>
+                  <div class="timeline-org">AccaStore & BimbingPKL.id</div>
+                  <p class="timeline-desc">
+                    Membangun website jualan jasa top-up AccaStore dan platform landing page BimbingPKL untuk membantu siswa menyelesaikan format laporan PKL.
+                  </p>
+                  <div class="timeline-badges">
+                    <span class="tag-pill">Tailwind CSS</span>
+                    <span class="tag-pill">E-Commerce</span>
+                    <span class="tag-pill">Vibe Coding</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Education -->
+          <div class="timeline-column reveal">
+            <div class="timeline-column-header">
+              <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              <h3 class="timeline-column-title">Pendidikan</h3>
+            </div>
+
+            <div class="timeline-list">
+              <!-- Education Item 1 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-time">Aktif — SMK</div>
+                  <h4 class="timeline-role">Siswa TKJ (Teknik Komputer & Jaringan)</h4>
+                  <div class="timeline-org">SMK Sore Tulungagung</div>
+                  <p class="timeline-desc">
+                    Fokus pada administrasi server Linux, routing Mikrotik, jaringan komputer, serta pengembangan web praktis.
+                  </p>
+                  <div class="timeline-badges">
+                    <span class="tag-pill">SMK TKJ</span>
+                    <span class="tag-pill">Tulungagung</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (FORMAT: MASALAH -> SOLUSI -> TECH) -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">04 / Proyek Unggulan</span>
+          <h2 class="section-title">Selected Projects</h2>
+          <p class="section-subtitle">Tiga proyek nyata paling kuat dengan format Masalah &rarr; Solusi &rarr; Tech.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project A: AccaStore Portfolio v1 -->
+          <article class="project-card spotlight-card reveal">
+            <div class="project-visual personal-visual">
+              <div class="visual-header">
+                <span class="code-dot red"></span>
+                <span class="code-dot yellow"></span>
+                <span class="code-dot green"></span>
+                <span class="visual-badge">Web Toko / E-Commerce</span>
+              </div>
+              <div class="visual-body">
+                <div class="mockup-line w-80"></div>
+                <div class="mockup-boxes">
+                  <div class="mockup-box active"></div>
+                  <div class="mockup-box"></div>
+                </div>
+                <div class="mockup-line w-60"></div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category-badge category-personal">Web Toko</span>
+                <span class="project-year">Live Project</span>
+              </div>
+              <h3 class="project-title">AccaStore Portfolio v1</h3>
+              
+              <div class="project-case-study">
+                <p class="case-item"><strong>Masalah:</strong> Butuh tempat jualan jasa top-up yang meyakinkan pembeli.</p>
+                <p class="case-item"><strong>Yang dikerjain:</strong> Desain web portfolio, daftar list harga transparan, dan tombol order WhatsApp langsung.</p>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Hosting xo.je</span>
+              </div>
+              <div class="project-actions">
+                <a href="http://accastore-portfoliov1.xo.je" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                  <span>Kunjungi Web Live</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project B: BimbingPKL.id -->
+          <article class="project-card spotlight-card reveal">
+            <div class="project-visual academic-visual">
+              <div class="visual-header">
+                <span class="code-dot red"></span>
+                <span class="code-dot yellow"></span>
+                <span class="code-dot green"></span>
+                <span class="visual-badge status-published">Best Seller ⭐</span>
+              </div>
+              <div class="visual-body">
+                <div class="mockup-chart">
+                  <div class="chart-bar h-40"></div>
+                  <div class="chart-bar h-70"></div>
+                  <div class="chart-bar h-90"></div>
+                  <div class="chart-bar h-65"></div>
+                </div>
+                <div class="mockup-line w-75"></div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category-badge category-academic">Web Jasa Bimbingan</span>
+                <span class="project-year">Best Seller</span>
+              </div>
+              <h3 class="project-title">BimbingPKL.id</h3>
+
+              <div class="project-case-study">
+                <p class="case-item"><strong>Masalah:</strong> Banyak anak TKJ pusing format laporan PKL (spacing, crop gambar, daftar isi otomatis).</p>
+                <p class="case-item"><strong>Yang dikerjain:</strong> Bikin landing page jasa bimbingan + penataan sistem paket harga yang jelas.</p>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Vibe Coding Method</span>
+                <span class="tech-tag">Landing Page</span>
+              </div>
+              <div class="project-actions">
+                <a href="#contact" class="btn btn-sm btn-primary">
+                  <span>Lihat Detail Jasa</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project C: Debian Web Server - PT. Trimitra Sejati -->
+          <article class="project-card spotlight-card reveal">
+            <div class="project-visual research-visual">
+              <div class="visual-header">
+                <span class="code-dot red"></span>
+                <span class="code-dot yellow"></span>
+                <span class="code-dot green"></span>
+                <span class="visual-badge">Server Administration</span>
+              </div>
+              <div class="visual-body">
+                <div class="network-nodes">
+                  <span class="node n-1"></span>
+                  <span class="node n-2"></span>
+                  <span class="node n-center"></span>
+                </div>
+                <div class="mockup-line w-90"></div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-category-badge category-research">Lingkungan Industri</span>
+                <span class="project-year">PKL 2026</span>
+              </div>
+              <h3 class="project-title">Debian Web Server — PT. Trimitra Sejati</h3>
+
+              <div class="project-case-study">
+                <p class="case-item"><strong>Masalah:</strong> Kebutuhan hosting website portofolio di server lokal lingkungan kerja kantor.</p>
+                <p class="case-item"><strong>Yang dikerjain:</strong> Install & konfigurasi Apache2 di Debian 12, setting permission folder <code>/var/www/html</code>, dan restart service.</p>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Debian 12</span>
+                <span class="tech-tag">Apache2</span>
+                <span class="tech-tag">Linux Command</span>
+                <span class="tech-tag">Virtual Host</span>
+              </div>
+              <div class="project-actions">
+                <a href="#experience" class="btn btn-sm btn-outline">
+                  <span>Lihat Dokumentasi PKL</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">05 / Hubungi Saya</span>
+          <h2 class="section-title">Let's Talk</h2>
+          <p class="section-subtitle">Butuh jasa setup server Debian, jaringan Mikrotik, atau pembuatan website jualan cepat?</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Direct Links & Info -->
+          <div class="contact-info-card spotlight-card reveal">
+            <h3 class="contact-card-title">Kontak Langsung</h3>
+            <p class="contact-card-text">
+              Siap melayani kebutuhan konfigurasi server Linux, jaringan komputer, serta pembuatan landing page jualan cepat.
+            </p>
+
+            <div class="contact-links-list">
+              <!-- WhatsApp -->
+              <a href="https://wa.me/6285604762842" target="_blank" rel="noopener noreferrer" class="contact-link-item" title="Chat langsung via WhatsApp">
+                <div class="contact-link-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="contact-link-details">
+                  <span class="contact-link-name">WhatsApp</span>
+                  <span class="contact-link-val">Chat via WhatsApp</span>
+                </div>
+                <span class="link-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <!-- Web AccaStore -->
+              <a href="http://accastore-portfoliov1.xo.je" target="_blank" rel="noopener noreferrer" class="contact-link-item" title="Kunjungi Website AccaStore">
+                <div class="contact-link-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <div class="contact-link-details">
+                  <span class="contact-link-name">Website Portofolio v1</span>
+                  <span class="contact-link-val">accastore-portfoliov1.xo.je</span>
+                </div>
+                <span class="link-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:mmesakagungreiwan@gmail.com" class="contact-link-item" title="Kirim email ke Mesakh">
+                <div class="contact-link-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="contact-link-details">
+                  <span class="contact-link-name">Email</span>
+                  <span class="contact-link-val">mmesakagungreiwan@gmail.com</span>
+                </div>
+                <span class="link-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <!-- Lokasi -->
+              <div class="contact-link-item" style="cursor: default;">
+                <div class="contact-link-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="contact-link-details">
+                  <span class="contact-link-name">Lokasi</span>
+                  <span class="contact-link-val">Kenayan, Kampung Dalam, Tulungagung</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="response-time-pill">
+              <span class="pulse-dot"></span>
+              <span>Fast response: siap koordinasi proyek</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Form -->
+          <div class="contact-form-card spotlight-card reveal">
+            <h3 class="contact-form-title">Kirim Pesan</h3>
+            <p class="form-disclaimer">
+              Formulir pesan langsung terhubung dengan notifikasi respon cepat.
+            </p>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Nama Anda <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="Nama Anda" required autocomplete="name">
+                </div>
+                <span class="form-error" id="name-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Anda <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="email@anda.com" required autocomplete="email">
+                </div>
+                <span class="form-error" id="email-error" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Kebutuhan</label>
+                <div class="input-wrapper">
+                  <select id="contact-subject" name="subject" class="form-input form-select">
+                    <option value="Jasa Bimbingan Laporan PKL">Jasa Bimbingan Laporan PKL (BimbingPKL)</option>
+                    <option value="Jasa Top-Up AccaStore">Order Jasa Top-Up (AccaStore)</option>
+                    <option value="Setup Server Debian & Apache2">Setup Server Debian 12 & Apache2</option>
+                    <option value="Jaringan Mikrotik">Jaringan Komputer / Mikrotik</option>
+                    <option value="Pembuatan Website Cepat">Pembuatan Website Jualan Cepat</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Pesan <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <textarea id="contact-message" name="message" class="form-input form-textarea" rows="4" placeholder="Jelaskan kebutuhan Anda..." required minlength="10"></textarea>
+                </div>
+                <span class="form-error" id="message-error" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full submit-btn" id="submit-btn">
+                <span class="btn-text">Kirim Pesan</span>
+                <span class="btn-loader" aria-hidden="true"></span>
+                <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-brand">
+            <span class="brand-monogram">M</span>
+            <span class="brand-name">Mesakh<span class="brand-dot">.</span></span>
+          </a>
+          <p class="footer-tagline">Network Administrator & Web Developer · Gampengrejo, Tulungagung</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Navigasi Footer">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-back-to-top">
+          <a href="#hero" class="back-to-top-btn" aria-label="Kembali ke atas">
+            <span>Kembali ke atas</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year">2026</span> Mesakh Agung Reiwan. AccaStore Portfolio v1.
+        </p>
+        <p class="footer-credit">
+          Fokus di Debian Server & Website Jualan Cepat.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast" class="toast-notification" role="status" aria-live="polite">
+    <div class="toast-icon" id="toast-icon">✓</div>
+    <div class="toast-message" id="toast-message">Pesan notifikasi</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="200" height="200" fill="url(#bgGrad)" />
+  <circle cx="100" cy="85" r="70" fill="url(#glowGrad)" />
+
+  <!-- Stylized Modern Silhouette Avatar -->
+  <!-- Head -->
+  <circle cx="100" cy="72" r="32" fill="url(#neonGrad)" opacity="0.9" />
+  
+  <!-- Modern Hairline / Tech Accent -->
+  <path d="M72 68 Q100 40 128 68 Q100 56 72 68 Z" fill="#090d16" opacity="0.4" />
+  
+  <!-- Shoulders & Upper Torso -->
+  <path d="M42 165 C42 122 70 115 100 115 C130 115 158 122 158 165 Z" fill="url(#neonGrad)" opacity="0.8" />
+  
+  <!-- Subtle Tech Grid Lines on Avatar -->
+  <circle cx="100" cy="72" r="38" stroke="url(#neonGrad)" stroke-width="1.5" stroke-dasharray="3 4" fill="none" opacity="0.5" />
+  
+  <!-- Small Center Tech Node -->
+  <circle cx="100" cy="115" r="4" fill="#38bdf8" />
+</svg>
+
